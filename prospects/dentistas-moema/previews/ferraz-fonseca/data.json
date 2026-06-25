@@ -1,0 +1,53 @@
+{
+  "name": "Ferraz e Fonseca Odontologia",
+  "brand": "Ferraz & Fonseca",
+  "subbrand": "Infraestrutura moderna e atendimento odontológico em Moema",
+  "category": "Cirurgião dentista",
+  "rating": "5,0",
+  "address": "300 Avenida Iraí, Moema, São Paulo - SP",
+  "phone": "(11) 99193-1363",
+  "hours": "Fechado · Abre às 08:00",
+  "fit_with_plan": "alto",
+  "notes": "Patrocinado; infraestrutura moderna e estacionamento no local aparecem na chamada.",
+  "slug": "ferraz-fonseca",
+  "theme": {
+    "bg": "#f4f8fc",
+    "text": "#11253e",
+    "muted": "#5f738c",
+    "primary": "#183b6b",
+    "secondary": "#d8e7ff",
+    "accent": "#ffffff",
+    "dark": false
+  },
+  "services": [
+    [
+      "Clínica geral",
+      "Bloco institucional com linguagem segura e bem resolvida."
+    ],
+    [
+      "Avaliação com conveniência",
+      "Estacionamento e localização viram argumentos de decisão."
+    ],
+    [
+      "Atendimento moderno",
+      "Design mais sóbrio para valorizar estrutura e profissionalismo."
+    ]
+  ],
+  "differentials": [
+    "Tom institucional premium",
+    "Ênfase em conveniência local",
+    "Layout limpo e profissional"
+  ],
+  "faq": [
+    [
+      "Vale destacar infraestrutura?",
+      "Sim. Isso reduz incerteza e aumenta a percepção de valor."
+    ],
+    [
+      "Esse layout serve para clínica mais ampla?",
+      "Sim. Ele é versátil para diferentes serviços odontológicos."
+    ]
+  ],
+  "cta_label": "Agendar pelo WhatsApp",
+  "has_whatsapp": true
+}

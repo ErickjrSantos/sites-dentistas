@@ -1,0 +1,53 @@
+{
+  "name": "Tiger Odontologia",
+  "brand": "Tiger Odontologia",
+  "subbrand": "Branding forte e presença digital moderna para clínica odontológica",
+  "category": "Clínica odontológica",
+  "rating": "4,9",
+  "address": "Av. Rouxinol, 274 A, Moema, São Paulo - SP",
+  "phone": "(11) 99189-6466",
+  "hours": "Fechado · Abre às 09:00",
+  "fit_with_plan": "alto",
+  "notes": "Clínica com branding próprio; boa candidata para preview com linguagem moderna.",
+  "slug": "tiger-odontologia",
+  "theme": {
+    "bg": "#fff7f2",
+    "text": "#241813",
+    "muted": "#755d53",
+    "primary": "#f06f2f",
+    "secondary": "#ffd7bf",
+    "accent": "#ffffff",
+    "dark": false
+  },
+  "services": [
+    [
+      "Clínica odontológica",
+      "Bloco amplo para serviços diversos com linguagem moderna."
+    ],
+    [
+      "Captação local",
+      "Design pensado para destacar a marca e acelerar contato."
+    ],
+    [
+      "Apresentação forte",
+      "Visual com mais contraste e personalidade."
+    ]
+  ],
+  "differentials": [
+    "Identidade mais marcante",
+    "Boa aderência a branding próprio",
+    "Layout comercial com energia visual"
+  ],
+  "faq": [
+    [
+      "Vale investir mais em marca própria?",
+      "Sim. Quando o nome da clínica tem força, o design pode amplificar lembrança e diferenciação."
+    ],
+    [
+      "Esse modelo ajuda na captação local?",
+      "Sim. Ele une visibilidade de marca com CTA claro."
+    ]
+  ],
+  "cta_label": "Agendar pelo WhatsApp",
+  "has_whatsapp": true
+}

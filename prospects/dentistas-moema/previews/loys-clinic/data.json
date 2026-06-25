@@ -1,0 +1,53 @@
+{
+  "name": "LOYS CLINIC",
+  "brand": "LOYS CLINIC",
+  "subbrand": "Presença premium para clínica em região nobre de Moema/Ibirapuera",
+  "category": "Dentista",
+  "rating": "4,9",
+  "address": "Av. Ibirapuera, 2907 - conjunto 1207, Moema, São Paulo - SP",
+  "phone": "(11) 91689-9374",
+  "hours": "Aberto 24 horas",
+  "fit_with_plan": "alto",
+  "notes": "Posicionamento de clínica premium em região nobre; vale auditoria de SEO e conversão.",
+  "slug": "loys-clinic",
+  "theme": {
+    "bg": "#111111",
+    "text": "#f7f1e8",
+    "muted": "#c7bfb3",
+    "primary": "#d9b36a",
+    "secondary": "#2a2a2a",
+    "accent": "#171717",
+    "dark": true
+  },
+  "services": [
+    [
+      "Atendimento premium",
+      "Tom visual mais sóbrio para valorizar exclusividade."
+    ],
+    [
+      "Posicionamento local forte",
+      "Endereço e contexto como sinais de valor percebido."
+    ],
+    [
+      "Captação qualificada",
+      "Estrutura feita para atrair pacientes com maior intenção."
+    ]
+  ],
+  "differentials": [
+    "Paleta luxo e contraste alto",
+    "Ênfase em sofisticação",
+    "Boa aderência a público premium"
+  ],
+  "faq": [
+    [
+      "Esse visual é mais indicado para ticket alto?",
+      "Sim. A paleta escura com dourado reforça percepção premium."
+    ],
+    [
+      "O endereço ajuda no posicionamento?",
+      "Sim. Região forte contribui para autoridade e valor percebido."
+    ]
+  ],
+  "cta_label": "Agendar pelo WhatsApp",
+  "has_whatsapp": true
+}

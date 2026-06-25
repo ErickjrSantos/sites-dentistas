@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dra. Elisa Macedo | DTM, Prótese, Facetas e Clareamento em Moema</title>
+  <meta name="description" content="Dra. Elisa Macedo em Moema com foco em DTM, dor orofacial, bruxismo, prótese, facetas e clareamento. Atendimento com abordagem personalizada, conforto e estética." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f4f8ff;--text:#0a1d34;--muted:#62748f;--purple:#5a3bff;--cyan:#7ce7ff;--white:#fff;--line:#dbe6f6;--green:#17c964;--shadow:rgba(50,50,93,.18) 0 32px 48px -28px,rgba(0,0,0,.08) 0 20px 30px -20px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:'Source Sans 3',system-ui,sans-serif;background:radial-gradient(circle at top left,#d8ecff 0,#f4f8ff 28%,#f4f8ff 100%);color:var(--text)}
+    .container{max-width:1160px;margin:auto;padding:0 22px}.nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0}.brand{font-size:24px;font-weight:700;letter-spacing:-.02em}.brand span{color:var(--purple)}
+    .cta,.cta-outline,.wa{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:700;border-radius:14px;transition:.2s ease}.cta{padding:14px 20px;background:var(--purple);color:#fff;box-shadow:var(--shadow)}.cta:hover{transform:translateY(-1px)}
+    .cta-outline{padding:14px 20px;border:1px solid var(--line);color:var(--text);background:rgba(255,255,255,.7)}.cta-outline:hover{background:#fff}
+    .hero{padding:28px 0 56px;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}.kicker{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(90,59,255,.08);color:var(--purple);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+    h1{font-size:clamp(40px,6vw,72px);line-height:.96;letter-spacing:-.05em;margin:18px 0 18px;font-weight:300}.hero p{font-size:20px;line-height:1.65;color:var(--muted);max-width:640px}
+    .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}.panel{background:rgba(255,255,255,.88);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.9);border-radius:26px;padding:24px;box-shadow:var(--shadow)}
+    .badge{display:inline-flex;padding:8px 12px;border-radius:999px;background:#fff;color:var(--text);font-size:13px;font-weight:700;border:1px solid var(--line)}
+    .mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}.mini-card{padding:16px;border-radius:18px;background:#fff;border:1px solid var(--line)}.mini-card strong{display:block;font-size:24px}.mini-card span{color:var(--muted);font-size:14px}
+    section{padding:34px 0}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:22px}.section-head h2{font-size:36px;letter-spacing:-.04em;margin:0}.section-head p{max-width:560px;color:var(--muted);margin:0;font-size:18px}
+    .cards,.faq-grid,.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card,.faq-item,.contact-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:0 10px 24px rgba(14,32,68,.06)}
+    .card h3,.faq-item h3{margin:14px 0 10px;font-size:24px}.card p,.faq-item p,.contact-card p{color:var(--muted);line-height:1.65}.card ul{padding-left:18px;line-height:1.8;margin:12px 0 0}
+    .doctor{display:grid;grid-template-columns:.92fr 1.08fr;gap:18px}.portrait{min-height:360px;border-radius:28px;background:linear-gradient(160deg,#d9ebff,#fef7ff 50%,#ffffff);border:1px solid var(--line);box-shadow:var(--shadow);position:relative;overflow:hidden;padding:28px;display:flex;align-items:end}.portrait::before{content:'';position:absolute;inset:12% 10%;border-radius:30px;background:radial-gradient(circle at 30% 20%,rgba(124,231,255,.9),transparent 26%),linear-gradient(180deg,rgba(255,255,255,.92),rgba(255,255,255,.45));border:1px solid rgba(255,255,255,.7)}
+    .portrait-card{position:relative;z-index:1;background:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.95);padding:18px;border-radius:22px;max-width:320px}.portrait-card strong{display:block;font-size:26px;letter-spacing:-.03em}.portrait-card span{display:block;margin-top:6px;color:var(--muted);font-size:16px}
+    .highlights{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}.highlight{padding:16px;border-radius:18px;background:#fff;border:1px solid var(--line)}.highlight strong{display:block;font-size:18px;margin-bottom:6px}.highlight span{color:var(--muted)}
+    .faq-grid{grid-template-columns:repeat(2,1fr)}
+    .final{padding:34px;border-radius:28px;background:linear-gradient(135deg,#1c2c63,#5a3bff 58%,#7ce7ff);color:#fff;box-shadow:var(--shadow)}.final p{color:rgba(255,255,255,.84);font-size:18px;max-width:720px}
+    .contact{grid-template-columns:1.05fr .95fr .95fr}.contact-card strong{display:block;margin-bottom:8px}.map-link{color:var(--purple);font-weight:700;text-decoration:none}
+    .wa{position:fixed;right:18px;bottom:18px;background:var(--green);color:#04110a;padding:14px 18px;border-radius:999px;box-shadow:0 14px 30px rgba(23,201,100,.35)}
+    @media (max-width: 920px){.hero,.doctor,.cards,.faq-grid,.contact,.mini-grid,.highlights{grid-template-columns:1fr}.section-head{display:block}h1{font-size:52px}.nav{gap:12px;align-items:flex-start;flex-direction:column}.wa{left:16px;right:16px;bottom:16px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <div class="brand">Dra. Elisa <span>Macedo</span></div>
+      <a class="cta" href="https://wa.me/5511912502617?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">Agendar pelo WhatsApp</a>
+    </nav>
+
+    <section class="hero">
+      <div>
+        <span class="kicker">Moema • DTM • Bruxismo • Prótese • Facetas • Clareamento</span>
+        <h1>Atendimento odontológico com foco em conforto, função e estética.</h1>
+        <p>A Dra. Elisa Macedo atende pacientes que buscam mais segurança no diagnóstico, mais clareza no plano de tratamento e um cuidado personalizado para dor orofacial, bruxismo, prótese e estética do sorriso em Moema.</p>
+        <div class="actions">
+          <a class="cta" href="https://wa.me/5511912502617?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">Quero agendar uma avaliação</a>
+          <a class="cta-outline" href="#especialidades">Ver especialidades</a>
+        </div>
+      </div>
+      <div class="panel">
+        <span class="badge">Atendimento em Moema</span>
+        <h2 style="font-size:32px;margin:18px 0 10px;letter-spacing:-.04em">Uma presença clínica mais clara, elegante e orientada à decisão.</h2>
+        <p style="color:var(--muted);font-size:18px;line-height:1.7">A proposta aqui é facilitar o primeiro contato e transmitir confiança para quem procura alívio, reabilitação e estética com mais segurança.</p>
+        <div class="mini-grid">
+          <div class="mini-card"><strong>5,0</strong><span>nota pública exibida no Google Maps</span></div>
+          <div class="mini-card"><strong>Moema</strong><span>localização com alto valor percebido</span></div>
+          <div class="mini-card"><strong>5 frentes</strong><span>de atendimento com boa intenção de busca</span></div>
+          <div class="mini-card"><strong>WhatsApp</strong><span>canal rápido para primeira conversa</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="especialidades">
+      <div class="section-head">
+        <h2>Especialidades que combinam cuidado clínico e resultado percebido.</h2>
+        <p>O atendimento pode ser apresentado de forma direta, sem excesso técnico, ajudando o paciente a entender melhor o problema, a solução e o próximo passo.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <span class="badge">DTM e dor orofacial</span>
+          <h3>Mais conforto no dia a dia</h3>
+          <p>Para pacientes com dor facial, tensão muscular, estalos ou desconforto funcional, a comunicação precisa transmitir escuta, precisão e tranquilidade.</p>
+          <ul><li>Diagnóstico mais claro</li><li>Linguagem acessível</li><li>Foco em confiança</li></ul>
+        </article>
+        <article class="card">
+          <span class="badge">Bruxismo e prótese</span>
+          <h3>Função, equilíbrio e reabilitação</h3>
+          <p>Uma abordagem que valoriza previsibilidade, conforto mastigatório e um plano de tratamento bem explicado para cada caso.</p>
+          <ul><li>Percepção técnica</li><li>Jornada mais organizada</li><li>Boa conversão por segurança</li></ul>
+        </article>
+        <article class="card">
+          <span class="badge">Facetas e clareamento</span>
+          <h3>Estética natural e sofisticada</h3>
+          <p>Ideal para pacientes que querem melhorar a imagem do sorriso com um atendimento que una leveza visual, critério clínico e naturalidade.</p>
+          <ul><li>Alto apelo visual</li><li>Posicionamento premium</li><li>Ótimo gancho para CTA</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="doctor">
+      <div class="portrait">
+        <div class="portrait-card">
+          <strong>Dra. Elisa Macedo</strong>
+          <span>DTM, dor orofacial, prótese, facetas e clareamento</span>
+        </div>
+      </div>
+      <div class="panel">
+        <span class="badge">Atendimento personalizado</span>
+        <h2 style="font-size:40px;letter-spacing:-.05em;margin:14px 0 12px">Cuidado pensado para quem quer resolver dor, recuperar função e sorrir com mais confiança.</h2>
+        <p style="color:var(--muted);font-size:18px;line-height:1.75">Em odontologia premium, a experiência começa antes da consulta. Uma apresentação mais organizada ajuda o paciente a entender o valor do atendimento, reduz insegurança e aumenta a chance de contato qualificado.</p>
+        <div class="highlights">
+          <div class="highlight"><strong>Escuta e clareza</strong><span>Uma comunicação mais simples para orientar a decisão do paciente.</span></div>
+          <div class="highlight"><strong>Estética com critério</strong><span>Posicionamento ideal para tratamentos de maior valor percebido.</span></div>
+          <div class="highlight"><strong>Contato rápido</strong><span>WhatsApp como porta de entrada para avaliação inicial.</span></div>
+          <div class="highlight"><strong>Presença local forte</strong><span>Moema reforça sofisticação e conveniência para o público-alvo.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Diferenciais que reforçam confiança.</h2>
+        <p>Em vez de usar depoimentos genéricos, a página destaca elementos que ajudam o paciente a perceber mais organização, proximidade e valor no atendimento.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><span class="badge">Acesso rápido</span><h3>Contato simples pelo WhatsApp</h3><p>Reduz atrito para quem está comparando opções e quer uma resposta prática para iniciar o atendimento.</p></article>
+        <article class="card"><span class="badge">Posicionamento</span><h3>Comunicação mais premium</h3><p>Texto, hierarquia visual e organização pensados para aumentar autoridade sem parecer excessivamente técnico.</p></article>
+        <article class="card"><span class="badge">Conversão</span><h3>Estrutura focada em decisão</h3><p>Seções curtas, CTA claro e leitura fácil para transformar interesse em conversa qualificada.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Perguntas que ajudam a quebrar objeções.</h2>
+        <p>Um FAQ bem montado reduz dúvidas e ajuda o paciente a avançar para o contato com mais segurança.</p>
+      </div>
+      <div class="faq-grid">
+        <article class="faq-item"><h3>Quando procurar atendimento para DTM ou bruxismo?</h3><p>Quando houver dor facial, tensão, estalos, desgaste dental ou desconforto funcional recorrente, vale buscar avaliação para entender a causa e os caminhos de tratamento.</p></article>
+        <article class="faq-item"><h3>Facetas e clareamento podem ter abordagem mais natural?</h3><p>Sim. Para muitos pacientes, o objetivo é melhorar o sorriso com equilíbrio estético e resultado compatível com o perfil de cada caso.</p></article>
+        <article class="faq-item"><h3>Prótese exige avaliação individual?</h3><p>Sim. Cada situação pede análise própria para alinhar conforto, função, adaptação e expectativa de resultado.</p></article>
+        <article class="faq-item"><h3>Qual é a forma mais rápida de tirar dúvidas?</h3><p>O WhatsApp é o canal mais prático para iniciar o contato e entender os próximos passos para avaliação.</p></article>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="section-head">
+        <h2>Contato e localização.</h2>
+        <p>Informações públicas organizadas de forma simples para facilitar a tomada de decisão e o primeiro atendimento.</p>
+      </div>
+      <div class="contact">
+        <article class="contact-card">
+          <span class="badge">Contato</span>
+          <strong>Dra. Elisa Macedo</strong>
+          <p>Telefone / WhatsApp: (11) 91250-2617</p>
+          <p>Bairro: Moema, São Paulo</p>
+          <a class="cta" href="https://wa.me/5511912502617?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">Falar pelo WhatsApp</a>
+        </article>
+        <article class="contact-card">
+          <span class="badge">Endereço</span>
+          <strong>Av. Macuco, 726 - conjunto 1309</strong>
+          <p>Moema, São Paulo - SP</p>
+          <p>Boa conveniência para pacientes da região.</p>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Av.+Macuco,+726+-+conjunto+1309,+Moema,+S%C3%A3o+Paulo+-+SP" target="_blank" rel="noopener noreferrer">Abrir no mapa</a>
+        </article>
+        <article class="contact-card">
+          <span class="badge">Especialidades</span>
+          <strong>Atuação principal</strong>
+          <p>DTM e dor orofacial</p>
+          <p>Bruxismo</p>
+          <p>Prótese, facetas e clareamento</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="final">
+      <h2 style="font-size:42px;letter-spacing:-.05em;margin:0 0 10px">Agende sua avaliação e dê o próximo passo com mais segurança.</h2>
+      <p>Para quem busca mais conforto, função e estética no sorriso, uma primeira conversa clara já faz diferença. O WhatsApp é o caminho mais rápido para entender possibilidades de atendimento.</p>
+      <div class="actions">
+        <a class="cta" href="https://wa.me/5511912502617?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">Agendar avaliação</a>
+        <a class="cta-outline" href="#contato">Ver contato</a>
+      </div>
+    </section>
+  </div>
+
+  <a class="wa" href="https://wa.me/5511912502617?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+</body>
+</html>

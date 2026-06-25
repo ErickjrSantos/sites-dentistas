@@ -1,0 +1,53 @@
+{
+  "name": "Dentista Moema - TCR Odontologia",
+  "brand": "TCR Odontologia",
+  "subbrand": "Estética, clareamento e transformação do sorriso em Moema",
+  "category": "Dentista",
+  "rating": "4,9",
+  "address": "500 Rua Ministro Gabriel de Rezende Passos, Moema, São Paulo - SP",
+  "phone": "(11) 2305-7908",
+  "hours": "Fechado · Abre às 08:00",
+  "fit_with_plan": "alto",
+  "notes": "Patrocinado no Google Maps; copy já orientada para estética/sonho do sorriso.",
+  "slug": "tcr-odontologia",
+  "theme": {
+    "bg": "#fffaf2",
+    "text": "#28190e",
+    "muted": "#7a5a45",
+    "primary": "#b7772e",
+    "secondary": "#f7d9b1",
+    "accent": "#fff1de",
+    "dark": false
+  },
+  "services": [
+    [
+      "Clareamento",
+      "Para quem quer brilho, leveza e imagem mais cuidada."
+    ],
+    [
+      "Facetas",
+      "Posicionamento ideal para estética dental com alto valor percebido."
+    ],
+    [
+      "Avaliação personalizada",
+      "Primeira conversa com CTA claro para acelerar o contato."
+    ]
+  ],
+  "differentials": [
+    "Visual mais aspiracional",
+    "CTA forte para pacientes de estética",
+    "Tom comercial orientado a desejo e confiança"
+  ],
+  "faq": [
+    [
+      "Esse posicionamento funciona para estética?",
+      "Sim. O foco em imagem, leveza e clareza comercial conversa bem com pacientes de maior intenção."
+    ],
+    [
+      "O WhatsApp ajuda na conversão?",
+      "Sim. Ele reduz atrito e acelera o início da conversa."
+    ]
+  ],
+  "cta_label": "Agendar pelo WhatsApp",
+  "has_whatsapp": true
+}

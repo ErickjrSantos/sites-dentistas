@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas Implant Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#08090a;--panel:#111214;--soft:#1a1c20;--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.05);--text:#f7f8f8;--muted:#9aa1ad;--accent:#7b86ff;--accent2:#49d1ff;--success:#23d18b}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at top,#151826,#08090a 34%,#08090a 100%);color:var(--text)}
+    .container{max-width:1180px;margin:auto;padding:0 22px}.nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--line2)}.brand{font-weight:700;letter-spacing:-.03em}.brand span{color:var(--accent2)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 18px;border-radius:14px;text-decoration:none;font-weight:600}.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#05080d}.ghost{background:rgba(255,255,255,.03);color:var(--text);border:1px solid var(--line)}
+    .hero{display:grid;grid-template-columns:1.08fr .92fr;gap:24px;align-items:center;padding:40px 0 58px}.eyebrow{display:inline-flex;padding:8px 12px;border-radius:999px;background:rgba(123,134,255,.12);color:#a8b0ff;font-size:12px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em}
+    h1{font-size:clamp(48px,7vw,86px);line-height:.94;letter-spacing:-.055em;margin:18px 0 18px;font-weight:510}.lead{max-width:640px;font-size:19px;line-height:1.72;color:var(--muted)}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .dashboard,.panel,.card,.quote,.timeline-step{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:24px;box-shadow:rgba(0,0,0,.25) 0 10px 30px}.dashboard{padding:22px;overflow:hidden;position:relative}.dashboard:before{content:'';position:absolute;right:-70px;top:-70px;width:220px;height:220px;background:radial-gradient(circle,var(--accent),transparent 58%);opacity:.35}
+    .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}.stat{padding:16px;border:1px solid var(--line2);border-radius:18px;background:rgba(255,255,255,.02)}.stat strong{font-size:28px;display:block}.mono{font-family:'JetBrains Mono',monospace;color:#b8c0ff;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+    .hero-wire{margin-top:14px;padding:14px;border-radius:18px;background:#0b0d10;border:1px solid var(--line2)}.hero-wire div{display:flex;justify-content:space-between;padding:10px 0;color:#d4dae2;border-bottom:1px solid var(--line2)}.hero-wire div:last-child{border-bottom:none}
+    section{padding:32px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:20px}.section-head h2{margin:0;font-size:38px;letter-spacing:-.045em}.section-head p{margin:0;max-width:560px;color:var(--muted);font-size:18px;line-height:1.7}
+    .cards,.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card,.quote,.panel{padding:22px}.card h3,.quote h3{margin:12px 0 10px;font-size:23px}.card p,.quote p,.panel p{color:var(--muted);line-height:1.7}.card ul{padding-left:18px;line-height:1.8;color:#dfe6ee}
+    .process{display:grid;grid-template-columns:1fr 1fr;gap:16px}.timeline-step{padding:22px}.timeline-step strong{display:block;font-size:32px;color:var(--accent2)}
+    .scan{position:relative;min-height:360px;border-radius:28px;border:1px solid var(--line);background:linear-gradient(180deg,#0f1115,#0a0c10);overflow:hidden}.scan:before{content:'';position:absolute;inset:12%;border-radius:24px;border:1px solid rgba(123,134,255,.35);background:radial-gradient(circle at 30% 30%,rgba(73,209,255,.35),transparent 25%),radial-gradient(circle at 75% 60%,rgba(123,134,255,.22),transparent 28%),linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01))}.scan:after{content:'Escaneamento intraoral • planejamento guiado';position:absolute;left:22px;bottom:22px;padding:10px 12px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid var(--line);font-family:'JetBrains Mono',monospace;font-size:12px;color:#dce0ff}
+    .results{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.metric{padding:18px;border-radius:20px;background:rgba(255,255,255,.02);border:1px solid var(--line)}.metric strong{display:block;font-size:30px}.metric span{color:var(--muted);font-size:14px}
+    .final{padding:32px;border-radius:28px;background:linear-gradient(135deg,rgba(123,134,255,.18),rgba(73,209,255,.12));border:1px solid rgba(123,134,255,.25)}
+    .wa{position:fixed;right:18px;bottom:18px;background:#1bd98d;color:#02150d;text-decoration:none;font-weight:800;padding:14px 18px;border-radius:999px;box-shadow:0 14px 28px rgba(27,217,141,.28)}
+    @media (max-width:920px){.hero,.cards,.quotes,.process,.results,.grid2{grid-template-columns:1fr}.section-head{display:block}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <div class="brand">Atlas <span>Implant</span> Center</div>
+      <a class="btn primary" href="#agenda">Solicitar avaliação 3D</a>
+    </nav>
+
+    <section class="hero">
+      <div>
+        <span class="eyebrow">Implantes • carga imediata • cirurgia guiada</span>
+        <h1>Precisão cirúrgica.<br>Confiança desde o primeiro clique.</h1>
+        <p class="lead">Uma landing page com estética high-tech para clínicas de implante, prótese e reabilitação total. A proposta aqui é parecer um centro avançado, previsível e seguro — perfeito para casos complexos e tickets mais altos.</p>
+        <div class="actions">
+          <a class="btn primary" href="#agenda">Quero meu plano 3D</a>
+          <a class="btn ghost" href="#processo">Ver protocolo completo</a>
+        </div>
+      </div>
+      <div class="dashboard">
+        <span class="mono">Dashboard clínico / leitura instantânea</span>
+        <div class="grid2">
+          <div class="stat"><strong>24h</strong><span>para revisão do caso e retorno da equipe</span></div>
+          <div class="stat"><strong>+3.200</strong><span>implantes instalados com protocolo guiado</span></div>
+          <div class="stat"><strong>98.4%</strong><span>taxa de satisfação em reabilitação</span></div>
+          <div class="stat"><strong>CBCT</strong><span>tomografia e planejamento digital integrado</span></div>
+        </div>
+        <div class="hero-wire">
+          <div><span>Scanner intraoral</span><span class="mono">ativo</span></div>
+          <div><span>Planejamento protético</span><span class="mono">validado</span></div>
+          <div><span>Cirurgia guiada</span><span class="mono">precisão 0,2 mm</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Mensagem certa para casos de alto valor.</h2>
+        <p>Este site foi desenhado para vender previsibilidade, processo e tecnologia. Em implantes, isso reduz medo, justifica investimento e aumenta a confiança do paciente antes da consulta.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><span class="mono">01 / Captação</span><h3>Casos de implante com autoridade</h3><p>Copy orientada a solução de perda dentária, mastigação, autoestima e reabilitação, sem parecer genérica.</p><ul><li>Argumento técnico + humano</li><li>Posicionamento premium</li><li>Clareza no próximo passo</li></ul></article>
+        <article class="card"><span class="mono">02 / Prova</span><h3>Layout que comunica tecnologia</h3><p>Dados, processo visual e linguagem de centro avançado para reforçar que a clínica domina diagnóstico, planejamento e execução.</p><ul><li>Tomografia e escaneamento</li><li>Mockups do protocolo</li><li>Percepção de inovação</li></ul></article>
+        <article class="card"><span class="mono">03 / Conversão</span><h3>Agendamento com menos fricção</h3><p>Objeções sobre dor, tempo e risco são tratadas com clareza. O CTA gira em torno de avaliação digital e proposta individual.</p><ul><li>CTA de avaliação 3D</li><li>FAQ estratégico</li><li>Confiança clínica imediata</li></ul></article>
+      </div>
+    </section>
+
+    <section class="process" id="processo">
+      <div class="scan"></div>
+      <div class="panel">
+        <span class="mono">Fluxo de atendimento</span>
+        <h2 style="font-size:42px;letter-spacing:-.05em;margin:12px 0">Planejamento guiado do diagnóstico à prótese.</h2>
+        <p>O site apresenta a jornada clínica como um sistema de alta confiabilidade: triagem, imagem, desenho do caso, cirurgia guiada e acompanhamento. Isso posiciona a clínica como centro especializado — não apenas consultório comum.</p>
+        <div class="actions">
+          <a class="btn ghost" href="#indicadores">Ver indicadores</a>
+          <a class="btn primary" href="#agenda">Solicitar triagem digital</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Protocolo explicado em etapas.</h2>
+        <p>Uma estrutura excelente para clínicas de implantes porque vende clareza. Quanto mais o paciente entende o processo, menor a ansiedade e maior a percepção de segurança.</p>
+      </div>
+      <div class="process">
+        <article class="timeline-step"><span class="mono">Etapa 1</span><strong>01</strong><p>Triagem clínica e escaneamento intraoral para mapear condição óssea, espaço protético e possibilidades de reabilitação.</p></article>
+        <article class="timeline-step"><span class="mono">Etapa 2</span><strong>02</strong><p>Planejamento digital do caso com definição da posição ideal dos implantes e visualização do resultado protético.</p></article>
+        <article class="timeline-step"><span class="mono">Etapa 3</span><strong>03</strong><p>Cirurgia guiada com protocolo minimamente invasivo, maior previsibilidade e melhor controle do procedimento.</p></article>
+        <article class="timeline-step"><span class="mono">Etapa 4</span><strong>04</strong><p>Entrega protética e acompanhamento estruturado, reforçando estabilidade, conforto mastigatório e estética final.</p></article>
+      </div>
+    </section>
+
+    <section id="indicadores">
+      <div class="section-head">
+        <h2>Indicadores que sustentam a narrativa.</h2>
+        <p>Excelente para vender centro de implante de alta performance: mostra volume clínico, rapidez de resposta e organização do cuidado.</p>
+      </div>
+      <div class="results">
+        <div class="metric"><strong>7 dias</strong><span>prazo médio para fechar plano completo após avaliação</span></div>
+        <div class="metric"><strong>85%</strong><span>dos pacientes chegam por indicação ou busca com intenção alta</span></div>
+        <div class="metric"><strong>1:1</strong><span>atendimento consultivo com especialista responsável</span></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Depoimentos focados em confiança.</h2>
+        <p>Ao invés de clichês, os depoimentos reforçam previsibilidade, firmeza na explicação do tratamento e sensação de estar em um centro avançado.</p>
+      </div>
+      <div class="quotes">
+        <article class="quote"><h3>“Eu entendi todo o processo.”</h3><p>“Foi a primeira clínica em que senti que estavam me mostrando um plano real, não apenas tentando vender implante.”</p></article>
+        <article class="quote"><h3>“Muito mais seguro do que eu imaginava.”</h3><p>“Ver o planejamento e a tecnologia me deu tranquilidade para fazer a cirurgia com confiança.”</p></article>
+        <article class="quote"><h3>“Mudou minha mastigação e autoestima.”</h3><p>“Saí com a sensação de estar em um centro moderno, organizado e extremamente técnico.”</p></article>
+      </div>
+    </section>
+
+    <section class="final" id="agenda">
+      <span class="mono">Versão ideal para clínica de implantes, prótese protocolo e reabilitação oral</span>
+      <h2 style="font-size:42px;letter-spacing:-.05em;margin:12px 0 10px">Site perfeito para vender tratamento complexo sem parecer frio.</h2>
+      <p style="font-size:18px;color:#d2d8e2;line-height:1.75;max-width:780px">Essa direção serve muito bem para clínicas que querem parecer premium, avançadas e muito seguras. Ela eleva percepção técnica e justifica consultas, exames e planos com valor mais alto.</p>
+      <div class="actions"><a class="btn primary" href="../index.html">Voltar ao showcase</a></div>
+    </section>
+  </div>
+  <a class="wa" href="#agenda">WhatsApp avaliação</a>
+</body>
+</html>

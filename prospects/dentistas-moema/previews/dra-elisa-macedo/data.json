@@ -1,0 +1,53 @@
+{
+  "name": "Dra. Elisa Macedo - Dentista Moema | DTM e dor Orofacial, Bruxismo, Prótese, Facetas, Clareamento",
+  "brand": "Dra. Elisa Macedo",
+  "subbrand": "DTM, dor orofacial, prótese, facetas e clareamento",
+  "category": "Cirurgião dentista",
+  "rating": "5,0",
+  "address": "Av. Macuco, 726 - conjunto 1309, Moema, São Paulo - SP",
+  "phone": "(11) 91250-2617",
+  "hours": "Fechado · Abre às 08:00",
+  "fit_with_plan": "alto",
+  "notes": "Boa aderência ao template premium por atuar com facetas/clareamento e especialidades de valor alto.",
+  "slug": "dra-elisa-macedo",
+  "theme": {
+    "bg": "#f4f8ff",
+    "text": "#0a1d34",
+    "muted": "#62748f",
+    "primary": "#5a3bff",
+    "secondary": "#d9edff",
+    "accent": "#ffffff",
+    "dark": false
+  },
+  "services": [
+    [
+      "DTM e dor orofacial",
+      "Comunicação pensada para confiança, escuta e precisão."
+    ],
+    [
+      "Bruxismo e prótese",
+      "Posicionamento técnico com linguagem acessível e segura."
+    ],
+    [
+      "Facetas e clareamento",
+      "Bloco visual de estética natural e sofisticada."
+    ]
+  ],
+  "differentials": [
+    "Posicionamento premium clínico",
+    "Boa aderência a tratamentos de maior valor",
+    "Leitura simples com CTA forte"
+  ],
+  "faq": [
+    [
+      "O WhatsApp ajuda no primeiro atendimento?",
+      "Sim. É a forma mais rápida de iniciar a conversa."
+    ],
+    [
+      "Esse modelo funciona para DTM e estética juntos?",
+      "Sim. A estrutura permite equilibrar autoridade clínica e apelo visual."
+    ]
+  ],
+  "cta_label": "Agendar pelo WhatsApp",
+  "has_whatsapp": true
+}

@@ -1,0 +1,53 @@
+{
+  "name": "Dr. Joelson Richa",
+  "brand": "Dr. Joelson Richa",
+  "subbrand": "Atendimento odontológico em Moema com acesso contínuo",
+  "category": "Dentista",
+  "rating": "4,9",
+  "address": "Av. Rouxinol, 1041 - Conj. 104, Moema, São Paulo - SP",
+  "phone": "",
+  "hours": "Aberto 24 horas",
+  "fit_with_plan": "médio",
+  "notes": "Nome pessoal forte; seria necessário auditar o site atual e canais de contato.",
+  "slug": "dr-joelson-richa",
+  "theme": {
+    "bg": "#f3fbf7",
+    "text": "#123126",
+    "muted": "#5d7d71",
+    "primary": "#127a52",
+    "secondary": "#d8f4e7",
+    "accent": "#ffffff",
+    "dark": false
+  },
+  "services": [
+    [
+      "Atendimento odontológico",
+      "Texto direto para facilitar entendimento do paciente."
+    ],
+    [
+      "Contato rápido",
+      "Estrutura de conversão focada em reduzir atrito."
+    ],
+    [
+      "Presença local",
+      "Moema como reforço de conveniência e confiança."
+    ]
+  ],
+  "differentials": [
+    "Tom mais acessível e direto",
+    "Ênfase em disponibilidade",
+    "CTA seguro sem inventar WhatsApp"
+  ],
+  "faq": [
+    [
+      "Por que não há botão de WhatsApp?",
+      "Porque o telefone não foi capturado nesta rodada; o preview evita informar contato não confirmado."
+    ],
+    [
+      "Esse estilo funciona para clínica pessoal?",
+      "Sim. Ele reforça proximidade e acesso rápido."
+    ]
+  ],
+  "cta_label": "Ver contato e localização",
+  "has_whatsapp": false
+}
