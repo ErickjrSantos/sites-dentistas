@@ -49,5 +49,13 @@
     ]
   ],
   "cta_label": "Agendar pelo WhatsApp",
-  "has_whatsapp": true
+  "cta_href": "https://wa.me/5511991931363?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o.",
+  "cta_attr": " target=\"_blank\" rel=\"noopener noreferrer\"",
+  "has_whatsapp": true,
+  "kicker": "Infraestrutura • Conforto • Moema",
+  "headline": "Odontologia com estrutura moderna, conveniência e comunicação que transmite confiança.",
+  "intro": "Quando a clínica já tem boa percepção de infraestrutura, o preview precisa reforçar organização, conforto e praticidade para o paciente decidir com mais rapidez.",
+  "cta_secondary": "Ver especialidades",
+  "cta_secondary_href": "#especialidades",
+  "cta_secondary_attr": ""
 }

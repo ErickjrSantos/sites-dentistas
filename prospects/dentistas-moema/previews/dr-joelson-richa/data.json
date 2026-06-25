@@ -49,5 +49,13 @@
     ]
   ],
   "cta_label": "Ver contato e localização",
-  "has_whatsapp": false
+  "cta_href": "#contato",
+  "cta_attr": "",
+  "has_whatsapp": false,
+  "kicker": "Disponibilidade • Moema • Atendimento",
+  "headline": "Uma presença digital objetiva para quem quer contato rápido e sensação de cuidado imediato.",
+  "intro": "Como o lead aparece com operação 24 horas, o preview foi pensado para transmitir disponibilidade, proximidade e facilidade de acesso, sem inventar canais que não foram capturados publicamente.",
+  "cta_secondary": "Abrir localização",
+  "cta_secondary_href": "https://www.google.com/maps/search/?api=1&query=Av.+Rouxinol%2C+1041+-+Conj.+104%2C+Moema%2C+S%C3%A3o+Paulo+-+SP",
+  "cta_secondary_attr": " target=\"_blank\" rel=\"noopener noreferrer\""
 }

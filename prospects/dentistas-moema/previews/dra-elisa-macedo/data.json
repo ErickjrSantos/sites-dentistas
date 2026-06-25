@@ -49,5 +49,13 @@
     ]
   ],
   "cta_label": "Agendar pelo WhatsApp",
-  "has_whatsapp": true
+  "cta_href": "https://wa.me/5511912502617?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o.",
+  "cta_attr": " target=\"_blank\" rel=\"noopener noreferrer\"",
+  "has_whatsapp": true,
+  "kicker": "DTM • Bruxismo • Estética • Moema",
+  "headline": "Atendimento odontológico com foco em conforto, função e estética.",
+  "intro": "Uma presença digital mais clara ajuda pacientes a perceber segurança no diagnóstico, entender o tratamento e avançar mais rápido para a avaliação.",
+  "cta_secondary": "Ver especialidades",
+  "cta_secondary_href": "#especialidades",
+  "cta_secondary_attr": ""
 }
