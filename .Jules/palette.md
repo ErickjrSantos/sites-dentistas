@@ -1,0 +1,3 @@
+## 2024-05-23 - Micro-interactions in Static HTML Dashboards
+**Learning:** For static HTML sites without a complex build system, micro-UX improvements like hover transitions and focus-visible rings can be implemented by injecting a small `<style>` block. Using existing palette variables (if available) or standard CSS transitions maintains component portability while significantly improving the perceived quality and accessibility of the interface.
+**Action:** Always check for missing focus states and hover feedback in static showcases. Implement `focus-visible` to ensure keyboard users have clear visual cues without cluttering the UI for mouse users.
