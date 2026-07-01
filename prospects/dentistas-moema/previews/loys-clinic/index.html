@@ -13,8 +13,10 @@
     *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text)}
     .container{max-width:1180px;margin:auto;padding:0 22px} .nav{display:flex;justify-content:space-between;align-items:center;padding:26px 0}
     .brand{font-size:24px;font-weight:800;letter-spacing:-.03em} .brand span{color:var(--primary)}
-    .cta,.ghost,.float{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:700;border-radius:16px;transition:.2s ease}
-    .cta{background:var(--primary);color:#111;padding:14px 20px;box-shadow:var(--shadow)} .cta:hover{transform:translateY(-1px)}
+    .cta,.ghost,.float{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:700;border-radius:16px;transition:.2s ease, filter .2s ease}
+    .cta{background:var(--primary);color:#111;padding:14px 20px;box-shadow:var(--shadow)}
+    .cta:hover,.ghost:hover,.float:hover{transform:translateY(-1px);filter:brightness(1.1)}
+    .cta:focus-visible,.ghost:focus-visible,.float:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
     .ghost{padding:14px 20px;border:1px solid var(--line);color:var(--text);background:rgba(255,255,255,.06)}
     .hero{display:grid;grid-template-columns:1.08fr .92fr;gap:26px;align-items:center;padding:24px 0 56px}
     .kicker{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(217,179,106,.12);color:var(--primary);font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
