@@ -4,8 +4,8 @@ import re
 from pathlib import Path
 from urllib.parse import quote_plus
 
-base = Path(r"C:/Users/erick/OneDrive/Documentos/Fabrica-Autonoma-Sites-IA/github-template-study/prospects/dentistas-moema")
-csv_path = base / "leads-moema.csv"
+base = Path(__file__).parent.parent
+csv_path = base / "data" / "leads-moema.csv"
 out_dir = base / "previews"
 out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -152,6 +152,7 @@ for row in leads:
         for q, a in conf["faq"]
     )
     theme_css = f":root{{--bg:{theme['bg']};--text:{theme['text']};--muted:{theme['muted']};--primary:{theme['primary']};--secondary:{theme['secondary']};--surface:{theme['accent']};--line:{'#2f2f2f' if theme['dark'] else '#dce6ef'};--shadow:rgba(0,0,0,.18) 0 22px 44px -26px,rgba(0,0,0,.08) 0 12px 24px -18px;}}"
+    theme_css += "\n    .cta,.ghost,.float{transition:transform 0.2s ease, filter 0.2s ease;}\n    .cta:hover,.ghost:hover,.float:hover{filter:brightness(1.1);transform:translateY(-2px)}\n    .cta:focus-visible,.ghost:focus-visible,.float:focus-visible{outline:2px solid var(--primary);outline-offset:4px}\n    .card,.panel,.contact-card{transition:transform 0.3s ease;}\n    .card:hover,.panel:hover,.contact-card:hover{transform:translateY(-4px)}"
     phone_line = f'<p><strong>Telefone / WhatsApp:</strong> {row["phone"]}</p>' if row["phone"] else '<p><strong>Contato público:</strong> não capturado nesta rodada</p>'
     hours_line = f'<p><strong>Horário exibido:</strong> {row["hours"]}</p>' if row["hours"] else ""
     cta_secondary = "Abrir localização" if not has_whatsapp else "Ver especialidades"
@@ -293,7 +294,7 @@ for row in leads:
     conf = custom[row["name"]]
     slug = slugify(conf["brand"])
     cards.append(
-        f'<article class="card"><span class="badge">{row["category"]}</span><h2>{conf["brand"]}</h2><p>{conf["subbrand"]}</p><p class="muted"><strong>Nota pública:</strong> {row["rating"]}<br><strong>Fit:</strong> {row["fit_with_plan"]}<br><strong>Bairro:</strong> Moema</p><a class="cta" href="./{slug}/index.html">Abrir preview</a></article>'
+        f'<article class="card"><span class="badge">{row["category"]}</span><h2>{conf["brand"]}</h2><p>{conf["subbrand"]}</p><p class="muted"><strong>Nota pública:</strong> {row["rating"]}<br><strong>Fit:</strong> {row["fit_with_plan"]}<br><strong>Bairro:</strong> Moema</p><a class="cta" href="./{slug}/index.html" aria-label="Abrir preview de {conf["brand"]}">Abrir preview</a></article>'
     )
 
 index_html = f'''<!DOCTYPE html>
@@ -311,7 +312,10 @@ index_html = f'''<!DOCTYPE html>
     .container{{max-width:1240px;margin:auto;padding:32px 22px 56px}} h1{{font-size:56px;letter-spacing:-.05em;margin:0 0 12px}} p.lead{{max-width:820px;color:var(--muted);line-height:1.8;font-size:18px}}
     .grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}} .card{{background:var(--card);border-radius:28px;padding:22px;border:1px solid #dbe6ff;box-shadow:var(--shadow);color:var(--ink)}}
     .card h2{{margin:14px 0 10px;font-size:28px;letter-spacing:-.03em}} .card p{{line-height:1.7}} .muted{{color:#51627e}} .badge{{display:inline-flex;padding:8px 12px;border-radius:999px;background:#eef4ff;border:1px solid #d4e1fb;font-size:12px;font-weight:800;color:#335085}}
-    .cta{{display:inline-flex;margin-top:14px;padding:13px 18px;border-radius:14px;background:var(--primary);color:#fff;text-decoration:none;font-weight:800}}
+    .cta{{display:inline-flex;margin-top:14px;padding:13px 18px;border-radius:14px;background:var(--primary);color:#fff;text-decoration:none;font-weight:800;transition:transform 0.2s ease, filter 0.2s ease}}
+    .cta:hover{{filter:brightness(1.1);transform:translateY(-2px)}}
+    .cta:focus-visible{{outline:2px solid var(--primary);outline-offset:4px}}
+    .card{{transition:transform 0.3s ease}} .card:hover{{transform:translateY(-4px)}}
     @media (max-width: 980px){{.grid{{grid-template-columns:1fr}} h1{{font-size:42px}}}}
   </style>
 </head>
