@@ -10,6 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{--bg:#fffaf2;--text:#28190e;--muted:#7a5a45;--primary:#b7772e;--secondary:#f7d9b1;--surface:#fff1de;--line:#dce6ef;--shadow:rgba(0,0,0,.18) 0 22px 44px -26px,rgba(0,0,0,.08) 0 12px 24px -18px;}
+    .cta,.ghost,.float{transition:transform 0.2s ease, filter 0.2s ease;}
+    .cta:hover,.ghost:hover,.float:hover{filter:brightness(1.1);transform:translateY(-2px)}
+    .cta:focus-visible,.ghost:focus-visible,.float:focus-visible{outline:2px solid var(--primary);outline-offset:4px}
+    .card,.panel,.contact-card{transition:transform 0.3s ease;}
+    .card:hover,.panel:hover,.contact-card:hover{transform:translateY(-4px)}
     *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text)}
     .container{max-width:1180px;margin:auto;padding:0 22px} .nav{display:flex;justify-content:space-between;align-items:center;padding:26px 0}
     .brand{font-size:24px;font-weight:800;letter-spacing:-.03em} .brand span{color:var(--primary)}
