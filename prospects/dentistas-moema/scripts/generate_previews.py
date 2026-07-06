@@ -4,8 +4,8 @@ import re
 from pathlib import Path
 from urllib.parse import quote_plus
 
-base = Path(r"C:/Users/erick/OneDrive/Documentos/Fabrica-Autonoma-Sites-IA/github-template-study/prospects/dentistas-moema")
-csv_path = base / "leads-moema.csv"
+base = Path(__file__).resolve().parent.parent
+csv_path = base / "data" / "leads-moema.csv"
 out_dir = base / "previews"
 out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -175,8 +175,10 @@ for row in leads:
     .container{{max-width:1180px;margin:auto;padding:0 22px}} .nav{{display:flex;justify-content:space-between;align-items:center;padding:26px 0}}
     .brand{{font-size:24px;font-weight:800;letter-spacing:-.03em}} .brand span{{color:var(--primary)}}
     .cta,.ghost,.float{{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:700;border-radius:16px;transition:.2s ease}}
-    .cta{{background:var(--primary);color:{'#111' if theme['dark'] else '#fff'};padding:14px 20px;box-shadow:var(--shadow)}} .cta:hover{{transform:translateY(-1px)}}
+    .cta{{background:var(--primary);color:{'#111' if theme['dark'] else '#fff'};padding:14px 20px;box-shadow:var(--shadow)}} .cta:hover{{transform:translateY(-2px);filter:brightness(1.1)}}
+    .cta:active{{transform:translateY(0) scale(.98)}} .cta:focus-visible{{outline:3px solid var(--primary);outline-offset:4px}}
     .ghost{{padding:14px 20px;border:1px solid var(--line);color:var(--text);background:rgba(255,255,255,.06)}}
+    .ghost:hover{{background:rgba(255,255,255,.12)}} .ghost:focus-visible{{outline:2px solid var(--text);outline-offset:4px}}
     .hero{{display:grid;grid-template-columns:1.08fr .92fr;gap:26px;align-items:center;padding:24px 0 56px}}
     .kicker{{display:inline-block;padding:8px 12px;border-radius:999px;background:{'rgba(217,179,106,.12)' if theme['dark'] else 'rgba(0,0,0,.05)'};color:var(--primary);font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase}}
     h1{{font-size:clamp(40px,6vw,74px);line-height:.95;letter-spacing:-.05em;margin:16px 0 16px}} .hero p{{font-size:19px;line-height:1.7;color:var(--muted);max-width:660px}}
@@ -293,7 +295,7 @@ for row in leads:
     conf = custom[row["name"]]
     slug = slugify(conf["brand"])
     cards.append(
-        f'<article class="card"><span class="badge">{row["category"]}</span><h2>{conf["brand"]}</h2><p>{conf["subbrand"]}</p><p class="muted"><strong>Nota pública:</strong> {row["rating"]}<br><strong>Fit:</strong> {row["fit_with_plan"]}<br><strong>Bairro:</strong> Moema</p><a class="cta" href="./{slug}/index.html">Abrir preview</a></article>'
+        f'<article class="card"><span class="badge">{row["category"]}</span><h2>{conf["brand"]}</h2><p>{conf["subbrand"]}</p><p class="muted"><strong>Nota pública:</strong> {row["rating"]}<br><strong>Fit:</strong> {row["fit_with_plan"]}<br><strong>Bairro:</strong> Moema</p><a class="cta" href="./{slug}/index.html" aria-label="Abrir preview da clínica {conf["brand"]}">Abrir preview</a></article>'
     )
 
 index_html = f'''<!DOCTYPE html>
@@ -309,9 +311,11 @@ index_html = f'''<!DOCTYPE html>
     :root{{--bg:#0f172a;--card:#fff;--text:#e5edf9;--muted:#9fb3d1;--ink:#10223d;--primary:#7c9cff;--shadow:rgba(0,0,0,.24) 0 22px 44px -26px}}
     *{{box-sizing:border-box}} body{{margin:0;font-family:'Inter',system-ui,sans-serif;background:linear-gradient(180deg,#0b1220,#15233f);color:var(--text)}}
     .container{{max-width:1240px;margin:auto;padding:32px 22px 56px}} h1{{font-size:56px;letter-spacing:-.05em;margin:0 0 12px}} p.lead{{max-width:820px;color:var(--muted);line-height:1.8;font-size:18px}}
-    .grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}} .card{{background:var(--card);border-radius:28px;padding:22px;border:1px solid #dbe6ff;box-shadow:var(--shadow);color:var(--ink)}}
+    .grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}} .card{{background:var(--card);border-radius:28px;padding:22px;border:1px solid #dbe6ff;box-shadow:var(--shadow);color:var(--ink);transition:transform .2s ease,box-shadow .2s ease}}
+    .card:hover{{transform:translateY(-4px);box-shadow:rgba(0,0,0,.32) 0 32px 64px -28px}}
     .card h2{{margin:14px 0 10px;font-size:28px;letter-spacing:-.03em}} .card p{{line-height:1.7}} .muted{{color:#51627e}} .badge{{display:inline-flex;padding:8px 12px;border-radius:999px;background:#eef4ff;border:1px solid #d4e1fb;font-size:12px;font-weight:800;color:#335085}}
-    .cta{{display:inline-flex;margin-top:14px;padding:13px 18px;border-radius:14px;background:var(--primary);color:#fff;text-decoration:none;font-weight:800}}
+    .cta{{display:inline-flex;margin-top:14px;padding:13px 18px;border-radius:14px;background:var(--primary);color:#fff;text-decoration:none;font-weight:800;transition:transform .2s ease,filter .2s ease}}
+    .cta:hover{{transform:scale(1.02);filter:brightness(1.1)}} .cta:active{{transform:scale(.98)}} .cta:focus-visible{{outline:3px solid var(--primary);outline-offset:4px}}
     @media (max-width: 980px){{.grid{{grid-template-columns:1fr}} h1{{font-size:42px}}}}
   </style>
 </head>

@@ -1,0 +1,3 @@
+## 2025-05-15 - Disambiguação de links repetitivos e melhoria de affordance
+**Learning:** Em dashboards que apresentam múltiplos itens com CTAs idênticos (ex: "Abrir site", "Abrir preview"), a acessibilidade via leitor de tela é prejudicada pela falta de contexto. Além disso, em sites estáticos sem framework, a ausência de estados de foco visíveis e transições suaves reduz a percepção de qualidade "premium".
+**Action:** Sempre incluir `aria-label` descritivos em links repetitivos, utilizando o nome do item como contexto. Implementar `:focus-visible` com `outline-offset` para garantir navegação por teclado inclusiva e adicionar transições de `transform` e `filter` para feedback tátil visual.
