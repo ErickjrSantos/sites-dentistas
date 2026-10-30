@@ -4,8 +4,8 @@ import re
 from pathlib import Path
 from urllib.parse import quote_plus
 
-base = Path(r"C:/Users/erick/OneDrive/Documentos/Fabrica-Autonoma-Sites-IA/github-template-study/prospects/dentistas-moema")
-csv_path = base / "leads-moema.csv"
+base = Path(__file__).resolve().parent.parent
+csv_path = base / "data" / "leads-moema.csv"
 out_dir = base / "previews"
 out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -176,6 +176,7 @@ for row in leads:
     .brand{{font-size:24px;font-weight:800;letter-spacing:-.03em}} .brand span{{color:var(--primary)}}
     .cta,.ghost,.float{{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:700;border-radius:16px;transition:.2s ease}}
     .cta{{background:var(--primary);color:{'#111' if theme['dark'] else '#fff'};padding:14px 20px;box-shadow:var(--shadow)}} .cta:hover{{transform:translateY(-1px)}}
+    .cta:focus-visible,.ghost:focus-visible,.float:focus-visible{{outline:2px solid var(--primary);outline-offset:2px}}
     .ghost{{padding:14px 20px;border:1px solid var(--line);color:var(--text);background:rgba(255,255,255,.06)}}
     .hero{{display:grid;grid-template-columns:1.08fr .92fr;gap:26px;align-items:center;padding:24px 0 56px}}
     .kicker{{display:inline-block;padding:8px 12px;border-radius:999px;background:{'rgba(217,179,106,.12)' if theme['dark'] else 'rgba(0,0,0,.05)'};color:var(--primary);font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase}}
@@ -292,8 +293,9 @@ cards = []
 for row in leads:
     conf = custom[row["name"]]
     slug = slugify(conf["brand"])
+    brand_name = conf["brand"]
     cards.append(
-        f'<article class="card"><span class="badge">{row["category"]}</span><h2>{conf["brand"]}</h2><p>{conf["subbrand"]}</p><p class="muted"><strong>Nota pública:</strong> {row["rating"]}<br><strong>Fit:</strong> {row["fit_with_plan"]}<br><strong>Bairro:</strong> Moema</p><a class="cta" href="./{slug}/index.html">Abrir preview</a></article>'
+        f'<article class="card"><span class="badge">{row["category"]}</span><h2>{brand_name}</h2><p>{conf["subbrand"]}</p><p class="muted"><strong>Nota pública:</strong> {row["rating"]}<br><strong>Fit:</strong> {row["fit_with_plan"]}<br><strong>Bairro:</strong> Moema</p><a class="cta" href="./{slug}/index.html" aria-label="Abrir preview da clínica {brand_name}">Abrir preview</a></article>'
     )
 
 index_html = f'''<!DOCTYPE html>
@@ -312,6 +314,7 @@ index_html = f'''<!DOCTYPE html>
     .grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}} .card{{background:var(--card);border-radius:28px;padding:22px;border:1px solid #dbe6ff;box-shadow:var(--shadow);color:var(--ink)}}
     .card h2{{margin:14px 0 10px;font-size:28px;letter-spacing:-.03em}} .card p{{line-height:1.7}} .muted{{color:#51627e}} .badge{{display:inline-flex;padding:8px 12px;border-radius:999px;background:#eef4ff;border:1px solid #d4e1fb;font-size:12px;font-weight:800;color:#335085}}
     .cta{{display:inline-flex;margin-top:14px;padding:13px 18px;border-radius:14px;background:var(--primary);color:#fff;text-decoration:none;font-weight:800}}
+    .cta:focus-visible{{outline:2px solid var(--primary);outline-offset:2px}}
     @media (max-width: 980px){{.grid{{grid-template-columns:1fr}} h1{{font-size:42px}}}}
   </style>
 </head>
